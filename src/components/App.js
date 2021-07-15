@@ -7,6 +7,10 @@ import StreamEdit from "./streams/StreamEdit";
 import StreamDelete from "./streams/StreamDelete";
 import Header from "./Header";
 
+const streams = () => {
+  return <div>Streams</div>;
+};
+
 export default function App() {
   return (
     <div className="ui container">
