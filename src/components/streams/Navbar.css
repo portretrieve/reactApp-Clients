@@ -1,0 +1,30 @@
+ul {
+    text-align: center;
+    margin: 10px;
+}
+
+li {
+    list-style-type: none;
+    display: inline-block;
+    padding: 5px 2%;
+    margin: 1% 2%;
+    font-weight: 600;
+    background-color: rgb(105, 97, 97);
+    border-radius: 5px;
+}
+
+li a {
+    color: white;
+}
+
+li a:hover {
+    color: rgb(243, 242, 227);
+}
+
+h2 {
+    text-align: center;
+    background-color: rgb(223, 221, 213);
+    border: 1px black solid;
+    padding: 5px;
+    margin-top: 0;
+}

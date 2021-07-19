@@ -1,19 +1,10 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import Navbar from "./Navbar";
 
 function StreamShow() {
   return (
     <div>
-      This is StreamShow Component.
-      <br />
-      <br />
-      <Link to="/">StreamList</Link>
-      <br />
-      <Link to="/streams/create">StreamCreate</Link>
-      <br />
-      <Link to="/streams/edit">StreamEdit</Link>
-      <br />
-      <Link to="/streams/delete">StreamDelete</Link>
+      <Navbar title={"Show"}></Navbar>
     </div>
   );
 }

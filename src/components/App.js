@@ -7,10 +7,6 @@ import StreamEdit from "./streams/StreamEdit";
 import StreamDelete from "./streams/StreamDelete";
 import Header from "./Header";
 
-const streams = () => {
-  return <div>Streams</div>;
-};
-
 export default function App() {
   return (
     <div className="ui container">
@@ -19,7 +15,7 @@ export default function App() {
         <br />
         <Route path="/" exact component={StreamList} />
         <Route path="/streams/show" component={StreamShow} />
-        <Route path="/streams/create" component={StreamCreate} />
+        <Route path="/streams/new" component={StreamCreate} />
         <Route path="/streams/edit" component={StreamEdit}></Route>
         <Route path="/streams/delete" component={StreamDelete}></Route>
       </BrowserRouter>
