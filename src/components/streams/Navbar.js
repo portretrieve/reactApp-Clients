@@ -17,12 +17,6 @@ const Navbar = ({ title }) => {
           <li>
             <Link to="/streams/new">StreamCreate</Link>
           </li>
-          <li>
-            <Link to="/streams/edit">StreamEdit</Link>
-          </li>
-          <li>
-            <Link to="/streams/delete">StreamDelete</Link>
-          </li>
         </ul>
       </nav>
       <hr />

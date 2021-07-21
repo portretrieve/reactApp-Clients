@@ -1,3 +1,6 @@
+import history from "../history";
+import streams from "../apis/streams";
+
 import {
   SIGNED_IN,
   SIGNED_OUT,
@@ -7,8 +10,6 @@ import {
   EDIT_STREAM,
   DELETE_STREAM
 } from "./types";
-
-import streams from "../apis/streams";
 
 export const userIsSignedIn_AC = (userId) => {
   return {
@@ -31,6 +32,8 @@ export const addStream_AC = (formValues) => {
       type: CREATE_STREAM,
       payload: data
     });
+
+    history.push("/");
   };
 };
 
@@ -51,12 +54,14 @@ export const fetchStream_AC = (id) => async (dispatch) => {
 };
 
 export const editStream_AC = (id, formValues) => async (dispatch) => {
-  const { data } = await streams.put("/streams/" + id, formValues);
+  const { data } = await streams.patch("/streams/" + id, formValues);
 
   dispatch({
     type: EDIT_STREAM,
     payload: data
   });
+
+  history.push("/");
 };
 
 export const deleteStream_AC = (id) => async (dispatch) => {
@@ -64,4 +69,5 @@ export const deleteStream_AC = (id) => async (dispatch) => {
   dispatch({
     type: DELETE_STREAM
   });
+  history.push("/");
 };
